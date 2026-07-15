@@ -39,16 +39,11 @@ These tools give full control over data pipelines, schemas, and activations whil
 
 ### Featured Projects
 
-- **[RudderStack](https://rudderstack.com)** — Open-source, warehouse-native CDP. Collect events and route to warehouses/tools with Segment-compatible API. Self-host or cloud.<grok-card data-id="d8afe5" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card>
-  - GitHub: [rudderlabs/rudder-server](https://github.com/rudderlabs/rudder-server)
-
-- **[Snowplow](https://snowplow.io)** — Open-source behavioral data platform for building scalable, customizable event pipelines and analytics.<grok-card data-id="cd4eb7" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card>
-
-- **[Jitsu](https://jitsu.com)** — Open-source CDP focused on real-time data collection and syncing. Lightweight and extensible.<grok-card data-id="320bf8" data-type="citation_card" data-plain-type="render_inline_citation" ></grok-card>
-
-- **[Tracardi](https://github.com/Tracardi/tracardi)** — Open-source customer data platform with profiling, segmentation, and journey orchestration.
-
-- **[Apache Unomi](https://unomi.apache.org)** — Apache project for customer data and personalization engine.
+- **[Snowplow](https://snowplow.io)** [![GitHub stars](https://img.shields.io/github/stars/snowplow/snowplow?style=social&color=white)](https://github.com/snowplow/snowplow/stargazers) — Open-source behavioral data platform for building scalable, customizable event pipelines and analytics.
+- **[RudderStack](https://rudderstack.com)** [![GitHub stars](https://img.shields.io/github/stars/rudderlabs/rudder-server?style=social&color=white)](https://github.com/rudderlabs/rudder-server/stargazers) — Open-source, warehouse-native CDP. Collect events and route to warehouses/tools with Segment-compatible API.
+- **[Jitsu](https://jitsu.com)** [![GitHub stars](https://img.shields.io/github/stars/jitsucom/jitsu?style=social&color=white)](https://github.com/jitsucom/jitsu/stargazers) — Open-source CDP focused on real-time data collection and syncing. Lightweight and extensible.
+- **[Tracardi](https://github.com/Tracardi/tracardi)** [![GitHub stars](https://img.shields.io/github/stars/Tracardi/tracardi?style=social&color=white)](https://github.com/Tracardi/tracardi/stargazers) — Open-source customer data platform with profiling, segmentation, and journey orchestration.
+- **[Apache Unomi](https://unomi.apache.org)** [![GitHub stars](https://img.shields.io/github/stars/apache/unomi?style=social&color=white)](https://github.com/apache/unomi/stargazers) — Apache project for customer data and personalization engine.
 
 ### Additional Open-Source Tools
 - **OpenTelemetry** + custom pipelines for observability and data collection.
