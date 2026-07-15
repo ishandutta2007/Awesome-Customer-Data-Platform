@@ -12,15 +12,22 @@ A curated guide to leading **SaaS/cloud-hosted Customer Data Platforms** (like S
 Popular platforms for collecting, unifying, and activating customer data across sources for marketing, analytics, and personalization.
 
 ### Leading Options
-- **[Segment](https://segment.com)** — Pioneering CDP for event collection and routing to hundreds of tools.
-- **[RudderStack](https://rudderstack.com)** — Warehouse-native CDP with strong open-source roots.
-- **[Snowplow](https://snowplow.io)** — Behavioral data platform for granular, customizable event pipelines.
-- **[Jitsu](https://jitsu.com)** — Open-source-friendly real-time CDP for data collection and syncing.
-- **[mParticle](https://mparticle.com)**, **[Tealium](https://tealium.com)** — Enterprise-focused with advanced identity resolution and orchestration.
-- **[Hightouch](https://hightouch.com)**, **[Census](https://getcensus.com)** — Reverse ETL tools for activating warehouse data.
-- **[ActionIQ](https://actioniq.com)**, **[Lytics](https://lytics.com)**, **[Bloomreach](https://bloomreach.com)** — AI-powered customer journey and personalization platforms.
 
-**Other notables**: Amperity, Treasure Data.
+| Platform | Description | Pricing Model | Free Tier Limits |
+|---|---|---|---|
+| **[Segment](https://segment.com)** | Pioneering CDP for event collection and routing to hundreds of tools. | MTU-based | Free up to 1,000 MTUs/mo, 500k records |
+| **[RudderStack](https://rudderstack.com)** | Warehouse-native CDP with strong open-source roots. | Event volume-based | Free up to 250,000 events/mo |
+| **[Snowplow](https://snowplow.io)** | Behavioral data platform for granular, customizable event pipelines. | Event volume-based | Open Source / Free Community Edition |
+| **[Jitsu](https://jitsu.com)** | Open-source-friendly real-time CDP for data collection and syncing. | Event volume-based | Free up to 10,000 events/mo on Cloud |
+| **[mParticle](https://mparticle.com)** | Enterprise-focused with advanced identity resolution and orchestration. | MTU-based | No free tier (Custom pricing) |
+| **[Tealium](https://tealium.com)** | Enterprise-focused with advanced identity resolution and orchestration. | Event volume-based | No free tier (Custom pricing) |
+| **[Hightouch](https://hightouch.com)** | Reverse ETL tools for activating warehouse data. | Destination-based | Free for 1 destination, unlimited syncs |
+| **[Census](https://getcensus.com)** | Reverse ETL tools for activating warehouse data. | Destination-based | Free for 10 connections, basic syncs |
+| **[ActionIQ](https://actioniq.com)** | AI-powered customer journey and personalization platforms. | Custom enterprise | No free tier |
+| **[Lytics](https://lytics.com)** | AI-powered customer journey and personalization platforms. | Usage-based | No free tier |
+| **[Bloomreach](https://bloomreach.com)** | AI-powered customer journey and personalization platforms. | Custom enterprise | No free tier |
+| **[Amperity](https://amperity.com)** | Enterprise CDP for identity resolution and activation. | Custom enterprise | No free tier |
+| **[Treasure Data](https://treasuredata.com)** | Enterprise CDP specializing in unified customer views. | Custom enterprise | No free tier |
 
 These platforms help centralize customer data, reduce engineering overhead, and enable omnichannel activation.
 
