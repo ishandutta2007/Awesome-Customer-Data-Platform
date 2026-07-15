@@ -1,4 +1,7 @@
 # Awesome-Customer-Data-Platform
+
+![Banner](assets/banner.svg)
+
 ## Top Customer Data Platforms (CDP) & Open-Source Alternatives
 
 A curated guide to leading **SaaS/cloud-hosted Customer Data Platforms** (like Segment, RudderStack, Snowplow, Jitsu, mParticle, Tealium, ActionIQ, Hightouch, Census, Lytics, Bloomreach) and their **open-source/self-hosted equivalents**. 
