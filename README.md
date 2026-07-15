@@ -2,7 +2,7 @@
 
 ![Banner](assets/banner.svg)
 
-## Top Customer Data Platforms (CDP) & Open-Source Alternatives
+## 🚀 Top Customer Data Platforms (CDP) & Open-Source Alternatives
 
 A curated guide to leading **SaaS/cloud-hosted Customer Data Platforms** (like Segment, RudderStack, Snowplow, Jitsu, mParticle, Tealium, ActionIQ, Hightouch, Census, Lytics, Bloomreach) and their **open-source/self-hosted equivalents**. 
 
@@ -10,11 +10,11 @@ A curated guide to leading **SaaS/cloud-hosted Customer Data Platforms** (like S
 
 ---
 
-## SaaS / Cloud-Hosted Customer Data Platforms
+## ☁️ SaaS / Cloud-Hosted Customer Data Platforms
 
 Popular platforms for collecting, unifying, and activating customer data across sources for marketing, analytics, and personalization.
 
-### Leading Options
+### 🌟 Leading Options
 
 | Platform | Description | Pricing Model | Free Tier Limits | Company Size |
 |---|---|---|---|---|
@@ -36,11 +36,11 @@ These platforms help centralize customer data, reduce engineering overhead, and 
 
 ---
 
-## Open-Source / Self-Hosted Alternatives
+## 🛠️ Open-Source / Self-Hosted Alternatives
 
 These tools give full control over data pipelines, schemas, and activations while keeping data in your infrastructure.
 
-### Featured Projects
+### 🔥 Featured Projects
 
 - **[Snowplow](https://snowplow.io)** [![GitHub stars](https://img.shields.io/github/stars/snowplow/snowplow?style=social&color=white)](https://github.com/snowplow/snowplow/stargazers) — Open-source behavioral data platform for building scalable, customizable event pipelines and analytics.
 - **[RudderStack](https://rudderstack.com)** [![GitHub stars](https://img.shields.io/github/stars/rudderlabs/rudder-server?style=social&color=white)](https://github.com/rudderlabs/rudder-server/stargazers) — Open-source, warehouse-native CDP. Collect events and route to warehouses/tools with Segment-compatible API.
@@ -57,7 +57,7 @@ These tools give full control over data pipelines, schemas, and activations whil
 
 ---
 
-## Comparison
+## ⚖️ Comparison
 
 | Aspect              | SaaS Platforms                        | Open-Source / Self-Hosted                  |
 |---------------------|---------------------------------------|--------------------------------------------|
@@ -69,7 +69,7 @@ These tools give full control over data pipelines, schemas, and activations whil
 
 ---
 
-## Getting Started
+## 🏁 Getting Started
 
 1. Map your data sources and destinations (warehouses, tools, activation needs).
 2. Start with **RudderStack** for easy Segment migration or **Snowplow** for advanced behavioral modeling.
