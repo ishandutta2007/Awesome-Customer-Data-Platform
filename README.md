@@ -98,3 +98,95 @@ Feel free to submit PRs to expand this list with more projects, tools, or compar
 </div>
 # Awesome-Customer-Data-Platform
 
+# Top Customer Data Platform (CDP) Tools Ecosystem
+**Curated List of SaaS Products & Open-Source GitHub Projects**
+*Focused on Event Collection, Identity Resolution, Audience Building, Data Activation, Warehouse-Native Pipelines & Customer Profiles*
+**Last updated: August 2026**
+
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Customer Data Platforms (CDPs)**. These tools collect, unify, and activate customer data from websites, apps, servers, and other sources — enabling identity resolution, audience segmentation, real-time personalization, and routing to analytics, marketing, CRM, and data warehouse destinations.
+
+**Examples** include Segment, mParticle, Tealium, Bloomreach CDP, Treasure Data, ActionIQ, Lytics, BlueConic, Simon Data, RudderStack, Hightouch, Zeotap, Bloomreach Engagement, and Optimove (the category leaders and widely adopted platforms).
+
+**Open-source emphasis**: This category has excellent mature open-source options. The section below prioritizes self-hostable event pipelines, warehouse-native CDPs, and composable activation tools that give teams full control over data and infrastructure without MTU-based pricing lock-in.
+
+Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites / GitHub repos.
+
+## Table of Contents
+- [SaaS/Hosted Platforms](#saas-hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+## SaaS/Hosted Platforms
+- **[Segment](https://segment.com/)** (Twilio)  
+  Industry-standard customer data platform for collecting events once and routing them to hundreds of destinations, with strong identity resolution and audience tools.
+- **[mParticle](https://www.mparticle.com/)**  
+  Enterprise CDP particularly strong in mobile, identity resolution, and real-time data orchestration across platforms.
+- **[Tealium](https://tealium.com/)**  
+  Mature enterprise CDP and tag management platform focused on data governance, audience building, and omnichannel activation.
+- **[Bloomreach CDP / Engagement](https://www.bloomreach.com/)**  
+  Customer data and engagement platform combining CDP capabilities with personalization and marketing automation.
+- **[Treasure Data](https://www.treasuredata.com/)**  
+  Enterprise customer data platform emphasizing large-scale data collection, unification, and activation.
+- **[ActionIQ](https://www.actioniq.com/)**  
+  Enterprise CDP focused on composable architecture, audience management, and activation for large organizations.
+- **[Lytics](https://www.lytics.com/)**  
+  Behavioral CDP with machine-learning-driven audience scoring and predictive capabilities.
+- **[BlueConic](https://www.blueconic.com/)**  
+  Customer data platform centered on unified profiles, lifecycle orchestration, and marketing use cases.
+- **[Simon Data](https://www.simondata.com/)**  
+  CDP and marketing platform focused on data-driven customer journeys and activation.
+- **[RudderStack](https://www.rudderstack.com/)** (Cloud)  
+  Warehouse-native customer data platform with open-source core, event collection, transformations, and extensive destination support.
+- **[Hightouch](https://hightouch.com/)**  
+  Leading reverse-ETL / composable CDP platform that activates data from the warehouse to business tools without a separate customer store.
+- **[Zeotap](https://zeotap.com/)**  
+  Customer data and identity platform with strong privacy and compliance focus.
+- **[Optimove](https://www.optimove.com/)**  
+  Customer-led marketing platform with CDP-like capabilities for segmentation and multichannel orchestration.
+- **[Census](https://www.getcensus.com/)** / other reverse-ETL players  
+  Additional warehouse-native activation tools frequently evaluated alongside Hightouch.
+
+## Open-Source GitHub Projects
+- **[RudderStack](https://github.com/rudderlabs/rudder-server)**  
+  Leading open-source (and cloud) Segment alternative. Collects events from SDKs, applies transformations, and routes to 180+ destinations while treating the data warehouse as the source of truth. Production-ready and the closest feature parity to classic Segment Connections.
+- **[Jitsu](https://github.com/jitsucom/jitsu)**  
+  Open-source (MIT), lightweight, high-performance event collection and routing pipeline. Excellent Segment-compatible alternative focused on simplicity, speed, and direct warehouse loading (ClickHouse, BigQuery, Snowflake, etc.).
+- **[Snowplow](https://github.com/snowplow/snowplow)**  
+  Mature open-source behavioral data pipeline with strong schema validation, data quality guarantees, and warehouse-native design. Favored by data engineering teams that want governed, AI-ready event data.
+- **[PostHog](https://github.com/PostHog/posthog)**  
+  Fully open-source product analytics + CDP-style event collection platform. Captures events, supports destinations, and includes built-in analytics, session replay, feature flags, and experiments — ideal for product-led teams.
+- **[TRACARDI](https://github.com/tracardi/tracardi)**  
+  Open-source, API-first, composable engine for building custom Customer Data Platforms with event processing, profiling, and workflow capabilities.
+- **[Multiwoven](https://github.com/Multiwoven/multiwoven)**  
+  Open-source Reverse ETL and CDP-style activation platform positioned as an alternative to Hightouch and Census. Syncs warehouse data to business tools with self-hosting support.
+- **Airbyte** (open-source ELT)  
+  Widely used open-source data integration platform that can form part of a composable CDP stack by moving data into warehouses for activation.
+- **Warehouse-native activation patterns**  
+  Community and vendor-neutral approaches combining open event pipelines (RudderStack/Jitsu/Snowplow) with dbt models and reverse-ETL tools for full composable CDPs.
+
+### Additional Strong Open-Source Options
+- Schema registries and event validation tools that complement Snowplow or custom pipelines.
+- Identity resolution libraries and graph-based profile stores built on open databases.
+- Real-time streaming components (Kafka, Redpanda, etc.) used as the backbone of self-hosted CDPs.
+- Privacy and consent management open-source tools that integrate with event collection layers.
+- Emerging composable CDP accelerators that combine Snowplow + warehouse + activation.
+
+**Frameworks for building custom systems**: The most common modern pattern is a **composable CDP**:  
+**RudderStack** or **Jitsu** (or **Snowplow**) for collection → data warehouse (Snowflake/BigQuery/ClickHouse) as the source of truth → **dbt** for modeling → **Multiwoven** or similar reverse-ETL for activation. **PostHog** can serve as an all-in-one alternative when product analytics and event collection are needed together.
+
+## How to Contribute
+1. Fork the repo.
+2. Add/edit entries in `README.md` (follow existing format).
+3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
+4. Submit PR with a short explanation.
+
+Star the repo if you find it useful!
+
+## Disclaimer
+- This is a **community-curated** list — not exhaustive and not an endorsement.
+- Customer Data Platforms should be evaluated for event volume pricing, identity resolution quality, destination coverage, warehouse-native capabilities, privacy/compliance features (GDPR, CCPA), and total cost of ownership.
+- Open-source CDPs give full data ownership and eliminate per-MTU fees but require engineering resources for deployment, scaling, schema management, and destination maintenance.
+---
+**Made for data engineers, product analytics teams, growth engineers, and anyone who wants control over customer event data without proprietary lock-in or unpredictable MTU pricing.**
+Let's make customer data infrastructure more open, warehouse-native, and free from black-box platforms.
