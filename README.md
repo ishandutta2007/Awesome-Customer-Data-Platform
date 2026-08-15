@@ -98,7 +98,7 @@ Feel free to submit PRs to expand this list with more projects, tools, or compar
 </div>
 # Awesome-Customer-Data-Platform
 
-# Top Customer Data Platform (CDP) Tools Ecosystem
+## Top Customer Data Platform (CDP) Tools Ecosystem
 **Curated List of SaaS Products & Open-Source GitHub Projects**
 *Focused on Event Collection, Identity Resolution, Audience Building, Data Activation, Warehouse-Native Pipelines & Customer Profiles*
 **Last updated: August 2026**
