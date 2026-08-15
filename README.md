@@ -96,3 +96,5 @@ Feel free to submit PRs to expand this list with more projects, tools, or compar
 </picture>
 </a>
 </div>
+# Awesome-Customer-Data-Platform
+
