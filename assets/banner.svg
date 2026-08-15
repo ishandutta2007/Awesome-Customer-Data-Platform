@@ -1,14 +1,261 @@
-<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b16"/>
+      <stop offset="50%" stop-color="#0c1829"/>
+      <stop offset="100%" stop-color="#09101f"/>
     </linearGradient>
+
+    <linearGradient id="primaryAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <linearGradient id="streamGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Filters for Dynamic Glow Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Embedded CSS Keyframe Animations -->
+    <style>
+      @keyframes pulseRing {
+        0% { r: 24px; opacity: 0.8; }
+        50% { r: 50px; opacity: 0.2; }
+        100% { r: 76px; opacity: 0; }
+      }
+      @keyframes pulseRingDelayed {
+        0% { r: 20px; opacity: 0.7; }
+        50% { r: 44px; opacity: 0.15; }
+        100% { r: 68px; opacity: 0; }
+      }
+      @keyframes flowData {
+        0% { stroke-dashoffset: 240; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes flowDataReverse {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 240; }
+      }
+      @keyframes orbit {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes orbitReverse {
+        0% { transform: rotate(360deg); }
+        100% { transform: rotate(0deg); }
+      }
+      @keyframes shimmer {
+        0% { opacity: 0.75; }
+        50% { opacity: 1; filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.7)); }
+        100% { opacity: 0.75; }
+      }
+      @keyframes floatSlow {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+        100% { transform: translateY(0px); }
+      }
+
+      .pulse-1 { animation: pulseRing 3s ease-out infinite; }
+      .pulse-2 { animation: pulseRingDelayed 3s ease-out infinite 1.5s; }
+      .data-stream { stroke-dasharray: 8 8; animation: flowData 4s linear infinite; }
+      .data-stream-fast { stroke-dasharray: 6 6; animation: flowData 2.5s linear infinite; }
+      .data-stream-rev { stroke-dasharray: 8 8; animation: flowDataReverse 3.5s linear infinite; }
+      .orbiting-ring { transform-origin: 980px 190px; animation: orbit 20s linear infinite; }
+      .orbiting-ring-rev { transform-origin: 980px 190px; animation: orbitReverse 15s linear infinite; }
+      .shimmer-badge { animation: shimmer 4s ease-in-out infinite; }
+      .floating-node { animation: floatSlow 5s ease-in-out infinite; }
+    </style>
   </defs>
-  <rect width="100%" height="100%" fill="url(#grad1)" rx="15" />
-  <text x="50%" y="40%" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">Awesome Customer Data Platforms</text>
-  <text x="50%" y="60%" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">Curated SaaS &amp; Open-Source CDPs</text>
-  <circle cx="50" cy="50" r="20" fill="#ffffff" opacity="0.2">
-    <animate attributeName="r" values="20;30;20" dur="3s" repeatCount="indefinite"/>
-  </circle>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="380" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Border Accents -->
+  <rect x="2" y="2" width="1196" height="376" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5" opacity="0.7"/>
+  <rect x="6" y="6" width="1188" height="368" rx="12" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Background Ambient Cyber Grid -->
+  <g opacity="0.06" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    
+    <line x1="120" y1="0" x2="120" y2="380"/>
+    <line x1="240" y1="0" x2="240" y2="380"/>
+    <line x1="360" y1="0" x2="360" y2="380"/>
+    <line x1="480" y1="0" x2="480" y2="380"/>
+    <line x1="600" y1="0" x2="600" y2="380"/>
+    <line x1="720" y1="0" x2="720" y2="380"/>
+    <line x1="840" y1="0" x2="840" y2="380"/>
+    <line x1="960" y1="0" x2="960" y2="380"/>
+    <line x1="1080" y1="0" x2="1080" y2="380"/>
+  </g>
+
+  <!-- Left Header & Typography Section -->
+  <g transform="translate(60, 48)">
+    <!-- Pill Badge -->
+    <g class="shimmer-badge">
+      <rect x="0" y="0" width="350" height="28" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+      <circle cx="14" cy="14" r="4" fill="#38bdf8" filter="url(#subtleGlow)"/>
+      <text x="28" y="18" fill="#38bdf8" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">DATA INFRASTRUCTURE &amp; CDP ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(0, 72)">
+      <text x="0" y="0" fill="#ffffff" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="38" font-weight="900" letter-spacing="-0.5">Awesome Customer</text>
+      <text x="0" y="44" fill="url(#primaryAccent)" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="38" font-weight="900" letter-spacing="-0.5">Data Platform ⚡ 🌐</text>
+    </g>
+
+    <!-- Subtitle & Category Highlights -->
+    <text x="0" y="152" fill="#94a3b8" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="14.5" font-weight="400">
+      Curated directory of SaaS CDPs, Warehouse-Native pipelines,
+    </text>
+    <text x="0" y="174" fill="#cbd5e1" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="14" font-weight="500">
+      open-source behavioral event streams, identity resolution &amp; Reverse ETL.
+    </text>
+
+    <!-- Feature Pillars / Badges -->
+    <g transform="translate(0, 206)">
+      <!-- Badge 1: Identity Resolution -->
+      <g>
+        <rect x="0" y="0" width="150" height="26" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="17" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">🎯 Identity Resolution</text>
+      </g>
+
+      <!-- Badge 2: Warehouse Native -->
+      <g transform="translate(160, 0)">
+        <rect x="0" y="0" width="165" height="26" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="17" fill="#a855f7" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">🏛️ Warehouse-Native</text>
+      </g>
+
+      <!-- Badge 3: Real-Time Event Streams -->
+      <g transform="translate(335, 0)">
+        <rect x="0" y="0" width="165" height="26" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="17" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">⚡ Real-Time Streaming</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Interactive Visual Architecture Diagram (Right Section: Central CDP Hub + Ingestion & Activation Flow) -->
+  <g transform="translate(0, 0)">
+    
+    <!-- Curved Transmission Stream Lines (Sources -> Hub -> Destinations) -->
+    <!-- Inbound Path 1 (Web / SDK) -->
+    <path d="M 760,110 C 830,110 880,160 940,180" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.7" class="data-stream-fast"/>
+    <!-- Inbound Path 2 (Mobile Apps) -->
+    <path d="M 760,190 C 820,190 870,190 940,190" fill="none" stroke="#818cf8" stroke-width="2" opacity="0.8" class="data-stream"/>
+    <!-- Inbound Path 3 (Warehouse/Cloud) -->
+    <path d="M 760,270 C 830,270 880,220 940,200" fill="none" stroke="#c084fc" stroke-width="2" opacity="0.7" class="data-stream-fast"/>
+
+    <!-- Outbound Path 1 (Marketing & CRM) -->
+    <path d="M 1020,180 C 1070,160 1100,120 1140,110" fill="none" stroke="#34d399" stroke-width="2" opacity="0.7" class="data-stream"/>
+    <!-- Outbound Path 2 (Reverse ETL & Ad Platforms) -->
+    <path d="M 1020,190 C 1060,190 1090,190 1140,190" fill="none" stroke="#f472b6" stroke-width="2" opacity="0.8" class="data-stream-fast"/>
+    <!-- Outbound Path 3 (Analytics & BI) -->
+    <path d="M 1020,200 C 1070,220 1100,260 1140,270" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.7" class="data-stream"/>
+
+    <!-- Source Nodes (Left of Hub) -->
+    <!-- Node 1: Web SDK -->
+    <g transform="translate(710, 95)" class="floating-node">
+      <rect x="0" y="0" width="100" height="32" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" filter="url(#subtleGlow)"/>
+      <text x="50" y="20" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">💻 Web SDKs</text>
+    </g>
+
+    <!-- Node 2: Mobile Apps -->
+    <g transform="translate(710, 175)">
+      <rect x="0" y="0" width="100" height="32" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1.2" filter="url(#subtleGlow)"/>
+      <text x="50" y="20" fill="#818cf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">📱 Mobile Apps</text>
+    </g>
+
+    <!-- Node 3: Cloud APIs -->
+    <g transform="translate(710, 255)" class="floating-node">
+      <rect x="0" y="0" width="100" height="32" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1.2" filter="url(#subtleGlow)"/>
+      <text x="50" y="20" fill="#c084fc" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">☁️ Cloud APIs</text>
+    </g>
+
+    <!-- Destination Nodes (Right of Hub) -->
+    <!-- Dest 1: CRM & Email -->
+    <g transform="translate(1090, 95)">
+      <rect x="0" y="0" width="95" height="32" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.2" filter="url(#subtleGlow)"/>
+      <text x="47" y="20" fill="#34d399" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">📬 CRM / Email</text>
+    </g>
+
+    <!-- Dest 2: Ad Networks -->
+    <g transform="translate(1090, 175)" class="floating-node">
+      <rect x="0" y="0" width="95" height="32" rx="8" fill="#0f172a" stroke="#f472b6" stroke-width="1.2" filter="url(#subtleGlow)"/>
+      <text x="47" y="20" fill="#f472b6" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">🎯 Ad Networks</text>
+    </g>
+
+    <!-- Dest 3: Data Warehouse -->
+    <g transform="translate(1090, 255)">
+      <rect x="0" y="0" width="95" height="32" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.2" filter="url(#subtleGlow)"/>
+      <text x="47" y="20" fill="#fbbf24" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">🏛️ Warehouse</text>
+    </g>
+
+    <!-- Central CDP Engine Hub -->
+    <g transform="translate(980, 190)">
+      <!-- Animated Pulse Waves -->
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#38bdf8" stroke-width="1.5" class="pulse-1"/>
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#818cf8" stroke-width="1.5" class="pulse-2"/>
+
+      <!-- Orbiting Rings -->
+      <g class="orbiting-ring">
+        <circle cx="0" cy="0" r="60" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3" stroke-dasharray="6 4"/>
+        <circle cx="60" cy="0" r="4" fill="#38bdf8" filter="url(#subtleGlow)"/>
+      </g>
+      <g class="orbiting-ring-rev">
+        <circle cx="0" cy="0" r="46" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.3" stroke-dasharray="4 4"/>
+        <circle cx="-46" cy="0" r="3.5" fill="#c084fc" filter="url(#subtleGlow)"/>
+      </g>
+
+      <!-- Main CDP Core Sphere -->
+      <circle cx="0" cy="0" r="34" fill="url(#hubGrad)" filter="url(#glow)"/>
+      <circle cx="0" cy="0" r="30" fill="#0f172a" stroke="#818cf8" stroke-width="2"/>
+      
+      <!-- Core Text & Icon -->
+      <text x="0" y="-3" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="900" text-anchor="middle">CDP 360°</text>
+      <text x="0" y="12" fill="#38bdf8" font-family="'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">ENGINE</text>
+    </g>
+  </g>
+
+  <!-- Corner Tech HUD Accents -->
+  <g stroke="#38bdf8" stroke-width="1.5" opacity="0.5" fill="none">
+    <path d="M 20,35 L 20,20 L 35,20"/>
+    <path d="M 1180,35 L 1180,20 L 1165,20"/>
+    <path d="M 20,345 L 20,360 L 35,360"/>
+    <path d="M 1180,345 L 1180,360 L 1165,360"/>
+  </g>
 </svg>
